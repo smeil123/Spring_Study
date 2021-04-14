@@ -12,6 +12,9 @@
 compile('org.projectlombok:lombok')
 ```
 2. 인텔리제이 > Setting 에서 플러그인으로 설치 및 적용(재시작)
+
+
+### @Autowired
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTU2ODg5MDM2Ml19
+eyJoaXN0b3J5IjpbMTk5NzQyODQzOSwxNTY4ODkwMzYyXX0=
 -->
