@@ -192,8 +192,36 @@ update를 할때 쿼리를 날리지 않아도 된다. **JPA의 영속성 컨텍
 즉, Entity 객체의 값만 변경하면 별도로 Update쿼리를 날릴필요가 없어지며 이 개념을 **dritey checking**이라 한다.
 
 
+## JPA Auditing으로 생성시간/수정시간 자동화하기
+
+domain/BaseTimeEntity 생성
+```java
+package com.springboot.project.domain;  
+  
+import lombok.Getter;  
+import org.springframework.data.annotation.CreatedDate;  
+import org.springframework.data.annotation.LastModifiedBy;  
+import org.springframework.data.annotation.LastModifiedDate;  
+import org.springframework.data.jpa.domain.support.AuditingEntityListener;  
+  
+import javax.persistence.EntityListeners;  
+import javax.persistence.MappedSuperclass;  
+import java.time.LocalDateTime;  
+  
+@Getter  
+@MappedSuperclass  // 1
+@EntityListeners(AuditingEntityListener.class)  //2
+public class BaseTimeEntity {  
+  @CreatedDate  //3
+  private LocalDateTime createdDate;  
+      
+    @LastModifiedDate //4  
+  private LocalDateTime modifiedDate;  
+      
+}
+```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQwMjE4NzAxNCwxOTg5NDMyMTA1LC0xNT
-AwMzI4MTk4LDE2OTMwODYyMzQsLTIwODAwNTgxMDMsMTM4MTkx
-NTc5Ml19
+eyJoaXN0b3J5IjpbLTkyNTUwNzQxOSwtNDAyMTg3MDE0LDE5OD
+k0MzIxMDUsLTE1MDAzMjgxOTgsMTY5MzA4NjIzNCwtMjA4MDA1
+ODEwMywxMzgxOTE1NzkyXX0=
 -->
