@@ -227,8 +227,26 @@ public class Posts extends BaseTimeEntity {
 ```
 
 마지막으로 JPA Auditing 어노테이션들을 모두 활성화할 수 있도록 application 클래스에 활성화 어노테이션 추가
+
+```java
+package com.springboot.project;  
+  
+import org.springframework.boot.SpringApplication;  
+import org.springframework.boot.autoconfigure.SpringBootApplication;  
+import org.springframework.data.jpa.repository.config.EnableJpaAuditing;  
+  
+@EnableJpaAuditing // JPA Auditing 활성화  
+@SpringBootApplication  
+public class Application {  
+  public static void main(String[] args) {  
+  SpringApplication.run(Application.class, args);  
+    }  
+}
+```
+
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjAxNzY2NjcxMywtNDAyMTg3MDE0LDE5OD
-k0MzIxMDUsLTE1MDAzMjgxOTgsMTY5MzA4NjIzNCwtMjA4MDA1
-ODEwMywxMzgxOTE1NzkyXX0=
+eyJoaXN0b3J5IjpbLTIwMDQ1MjY2NzksLTQwMjE4NzAxNCwxOT
+g5NDMyMTA1LC0xNTAwMzI4MTk4LDE2OTMwODYyMzQsLTIwODAw
+NTgxMDMsMTM4MTkxNTc5Ml19
 -->
