@@ -1,6 +1,6 @@
 # Spring_Study
 
-*  toy-project(게시판) : https://github.com/smeil123/First_SpringProject
+*  게시판 만들기 : https://github.com/smeil123/First_SpringProject
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjU2MDI3ODk3XX0=
+eyJoaXN0b3J5IjpbLTk5NDQ3Nzg0MF19
 -->
