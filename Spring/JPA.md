@@ -168,7 +168,24 @@ spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.MySQL5InnoDBDialec
 
 하고, JPA테스트 결과를 실행하면 아래와 같이 JPA로 실행된 SQL을 볼 수 있다
 ![jpa실행결과](https://github.com/smeil123/CS_Study/blob/master/image/jpa실행결과.PNG)
+
+
+
+## dirty checking(더티 체킹)
+
+Posts.java
+```java
+public void update(String title, String content){  
+  this.title = title;  
+    this.content = content;  
+}
+```
+
+update를 할때 쿼리를 날리지 않아도 된다. **JPA의 영속성 컨텍스트** 때문에 가능하다.
+* 영속성 컨텍스트란, 엔티티를 여
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTk4OTQzMjEwNSwtMTUwMDMyODE5OCwxNj
-kzMDg2MjM0LC0yMDgwMDU4MTAzLDEzODE5MTU3OTJdfQ==
+eyJoaXN0b3J5IjpbMTI2NDk2MjE0MSwxOTg5NDMyMTA1LC0xNT
+AwMzI4MTk4LDE2OTMwODYyMzQsLTIwODAwNTgxMDMsMTM4MTkx
+NTc5Ml19
 -->
