@@ -182,10 +182,15 @@ public void update(String title, String content){
 ```
 
 update를 할때 쿼리를 날리지 않아도 된다. **JPA의 영속성 컨텍스트** 때문에 가능하다.
-* 영속성 컨텍스트란, 엔티티를 여
 
+#### 영속성 컨텍스트 
+ * 엔티티를 영구 저장하는 환경
+* 일종의 논리적인 개념
+* JPA의 엔티티 매니저가 활성화된 상태로(Spring Data JPA의 기본옵션) 트랜잭션 안에서 데이터베이스에서 데이터를 가져오면 이 데이터는 영속성 컨텍스트가 유지된 상태
+
+영속성 컨텍스트가 유지된 상태에서 데이터의 값을 변경하면 트랜잭션이 끝나는 시점에 해당 테이블에 변경분을 반영한
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTI2NDk2MjE0MSwxOTg5NDMyMTA1LC0xNT
+eyJoaXN0b3J5IjpbLTQ0ODk2OTMxNiwxOTg5NDMyMTA1LC0xNT
 AwMzI4MTk4LDE2OTMwODYyMzQsLTIwODAwNTgxMDMsMTM4MTkx
 NTc5Ml19
 -->
