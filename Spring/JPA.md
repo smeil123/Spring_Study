@@ -221,9 +221,14 @@ public class BaseTimeEntity {
 }
 ```
 
-이렇게 한 뒤, Posts 클래스(Entity 클래스)가 BaseTimeEntity를 상속받도록 변
+이렇게 한 뒤, Posts 클래스(Entity 클래스)가 BaseTimeEntity를 상속받도록 변경
+```java
+public class Posts extends BaseTimeEntity {
+```
+
+마지막으로 JPA Auditing 어노테이션들을 모두 활성화할 수 있도록 application 클래스에 활성화 어노테이션 추가
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTU1ODgzODk5LC00MDIxODcwMTQsMTk4OT
-QzMjEwNSwtMTUwMDMyODE5OCwxNjkzMDg2MjM0LC0yMDgwMDU4
-MTAzLDEzODE5MTU3OTJdfQ==
+eyJoaXN0b3J5IjpbMjAxNzY2NjcxMywtNDAyMTg3MDE0LDE5OD
+k0MzIxMDUsLTE1MDAzMjgxOTgsMTY5MzA4NjIzNCwtMjA4MDA1
+ODEwMywxMzgxOTE1NzkyXX0=
 -->
