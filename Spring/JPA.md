@@ -209,19 +209,21 @@ import javax.persistence.MappedSuperclass;
 import java.time.LocalDateTime;  
   
 @Getter  
-@MappedSuperclass  // 1
-@EntityListeners(AuditingEntityListener.class)  //2
+@MappedSuperclass // JPA Entity클래스들이 BaseTimeEntity를 상속할 경우 필드들도 컬럼으로 인식하도록  
+@EntityListeners(AuditingEntityListener.class) //BaseTimeEntity클래스에 Auditing기능을 포함  
 public class BaseTimeEntity {  
-  @CreatedDate  //3
+  @CreatedDate // Entity가 생성되어 저장될 때 시간이 자동 저장  
   private LocalDateTime createdDate;  
-      
-    @LastModifiedDate //4  
+  
+    @LastModifiedDate // 조회한 Entity 의 값을 변경할 때 시간이 자동 저장  
   private LocalDateTime modifiedDate;  
-      
+  
 }
 ```
+
+이렇게 한 뒤, Posts 클래스(Entity 클래스)가 BaseTimeEntity를 상속받도록 변
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTkyNTUwNzQxOSwtNDAyMTg3MDE0LDE5OD
-k0MzIxMDUsLTE1MDAzMjgxOTgsMTY5MzA4NjIzNCwtMjA4MDA1
-ODEwMywxMzgxOTE1NzkyXX0=
+eyJoaXN0b3J5IjpbNTU1ODgzODk5LC00MDIxODcwMTQsMTk4OT
+QzMjEwNSwtMTUwMDMyODE5OCwxNjkzMDg2MjM0LC0yMDgwMDU4
+MTAzLDEzODE5MTU3OTJdfQ==
 -->
