@@ -188,9 +188,12 @@ update를 할때 쿼리를 날리지 않아도 된다. **JPA의 영속성 컨텍
 * 일종의 논리적인 개념
 * JPA의 엔티티 매니저가 활성화된 상태로(Spring Data JPA의 기본옵션) 트랜잭션 안에서 데이터베이스에서 데이터를 가져오면 이 데이터는 영속성 컨텍스트가 유지된 상태
 
-영속성 컨텍스트가 유지된 상태에서 데이터의 값을 변경하면 트랜잭션이 끝나는 시점에 해당 테이블에 변경분을 반영한
+영속성 컨텍스트가 유지된 상태에서 데이터의 값을 변경하면 트랜잭션이 끝나는 시점에 해당 테이블에 변경분을 반영한다.
+즉, Entity 객체의 값만 변경하면 별도로 Update쿼리를 날릴필요가 없어지며 이 개념을 **dritey checking**이라 한다.
+
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQ0ODk2OTMxNiwxOTg5NDMyMTA1LC0xNT
+eyJoaXN0b3J5IjpbLTQwMjE4NzAxNCwxOTg5NDMyMTA1LC0xNT
 AwMzI4MTk4LDE2OTMwODYyMzQsLTIwODAwNTgxMDMsMTM4MTkx
 NTc5Ml19
 -->
