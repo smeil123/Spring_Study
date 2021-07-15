@@ -12,6 +12,7 @@ RDB를 실제로 많이 사용하고, 디비구조나 sql사용법을 다시 공
 ```
 CREATE DATABASE post_db default CHARACTER SET UTF8;  
 ```
+기존ㅇ
 ```
 create table if not exists post_db.post(
     -> id int(10) NOT NULL,
@@ -19,7 +20,11 @@ create table if not exists post_db.post(
     -> content TEXT(5000),
     -> author varchar(100) NOT NULL,
     -> readCount int(10));
+
+alter table post_db.posts add column modified_date datetime;
+alter table post_db.posts add column created_date datetime;
 ```
+
 
 **spring boot와 연동하기**
 
@@ -41,6 +46,6 @@ compile('org.springframework.session:spring-session-jdbc')
 2. application.properties
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzgzMjg1MzM4LC00OTY4MTcxNDUsMTg5ND
-cxNTEwN119
+eyJoaXN0b3J5IjpbMTI0ODI3MjkyOCw3ODMyODUzMzgsLTQ5Nj
+gxNzE0NSwxODk0NzE1MTA3XX0=
 -->
