@@ -8,9 +8,18 @@ RDB를 실제로 많이 사용하고, 디비구조나 sql사용법을 다시 공
 1. *https://dev.mysql.com/downloads/installer/* 여기서 mysql 서버와 shell 설치
 2. 환경변수 path에 C:\Program Files\MySQL\MySQL Server 8.0\bin 추가
 
-**mysql 테이블 생성**
-
-``
+**mysql 스키마 & 테이블 생성**
+```
+CREATE DATABASE post_db default CHARACTER SET UTF8;  
+```
+```
+create table if not exists post_db.post(
+    -> id int(10) NOT NULL,
+    -> title varchar(100) NOT NULL,
+    -> content TEXT(5000),
+    -> author varchar(100) NOT NULL,
+    -> readCount int(10));
+```
 
 **spring boot와 연동하기**
 
@@ -32,6 +41,6 @@ compile('org.springframework.session:spring-session-jdbc')
 2. application.properties
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzU1NzUzOTA5LC00OTY4MTcxNDUsMTg5ND
+eyJoaXN0b3J5IjpbNzgzMjg1MzM4LC00OTY4MTcxNDUsMTg5ND
 cxNTEwN119
 -->
