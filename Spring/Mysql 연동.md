@@ -12,7 +12,7 @@ RDB를 실제로 많이 사용하고, 디비구조나 sql사용법을 다시 공
 ```
 CREATE DATABASE post_db default CHARACTER SET UTF8;  
 ```
-기존ㅇ
+기존에 생성되어 있던 db 테이블과 컬럼을 모두 만들어 준다
 ```
 create table if not exists post_db.post(
     -> id int(10) NOT NULL,
@@ -46,6 +46,6 @@ compile('org.springframework.session:spring-session-jdbc')
 2. application.properties
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTI0ODI3MjkyOCw3ODMyODUzMzgsLTQ5Nj
-gxNzE0NSwxODk0NzE1MTA3XX0=
+eyJoaXN0b3J5IjpbLTE1NTQyNzkzNDUsNzgzMjg1MzM4LC00OT
+Y4MTcxNDUsMTg5NDcxNTEwN119
 -->
