@@ -21,7 +21,7 @@ create table if not exists post_db.post(
     -> title varchar(100) NOT NULL,
     -> content TEXT(5000),
     -> author varchar(100) NOT NULL,
-    -> readCount int(10));
+    -> read_count int(10));
 
 alter table post_db.posts add column modified_date datetime;
 alter table post_db.posts add column created_date datetime;
@@ -50,6 +50,6 @@ compile('org.springframework.session:spring-session-jdbc')
 2. application.properties
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExNTEwMDIwMTgsLTE1NTQyNzkzNDUsNz
-gzMjg1MzM4LC00OTY4MTcxNDUsMTg5NDcxNTEwN119
+eyJoaXN0b3J5IjpbLTU5NjE2NzEwMSwtMTU1NDI3OTM0NSw3OD
+MyODUzMzgsLTQ5NjgxNzE0NSwxODk0NzE1MTA3XX0=
 -->
