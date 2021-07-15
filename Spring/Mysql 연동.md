@@ -10,7 +10,12 @@ RDB를 실제로 많이 사용하고, 디비구조나 sql사용법을 다시 공
 
 **spring boot와 연동하기**
 
+1. build.gradle 에 의존성 추가
+```
+compile('org.springframework.session:spring-session-jdbc')
+```
+2. applicati
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTMyNTA3NzYyOV19
+eyJoaXN0b3J5IjpbLTE1NjEwNzU5MTJdfQ==
 -->
