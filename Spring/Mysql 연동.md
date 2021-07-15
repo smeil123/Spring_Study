@@ -38,7 +38,11 @@ compile('mysql:mysql-connector-java')
 compile('org.springframework.boot:spring-boot-starter-data-jpa')
 ```
 2. application.properties
-
+```
+spring.datasource.url=jdbc:mysql://localhost:3306/post_db?useSSL=false&useUnicode=true&serverTimezone=Asia/Seoul  
+spring.datasource.username=sysadmin  
+spring.datasource.password=tlsgksdmsgod123!
+```
 
 ## 로그인 세션 정보를 Mysql 과 연동하기
 
@@ -50,6 +54,6 @@ compile('org.springframework.session:spring-session-jdbc')
 2. application.properties
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTU5NjE2NzEwMSwtMTU1NDI3OTM0NSw3OD
+eyJoaXN0b3J5IjpbMTQzNzE0NDE3MCwtMTU1NDI3OTM0NSw3OD
 MyODUzMzgsLTQ5NjgxNzE0NSwxODk0NzE1MTA3XX0=
 -->
