@@ -12,9 +12,10 @@ RDB를 실제로 많이 사용하고, 디비구조나 sql사용법을 다시 공
 
 1. build.gradle 에 의존성 추가
 ```
-compile(
+compile('mysql:mysql-connector-java')
+compile('org.springframework.boot:spring-boot-starter-data-jpa')
 ```
-
+2. application.properties
 
 
 ## 로그인 세션 정보를 Mysql 과 연동하기
@@ -27,5 +28,5 @@ compile('org.springframework.session:spring-session-jdbc')
 2. application.properties
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyNzg1NDk3NDhdfQ==
+eyJoaXN0b3J5IjpbMTg5NDcxNTEwN119
 -->
