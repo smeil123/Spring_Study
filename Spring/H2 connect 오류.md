@@ -25,12 +25,55 @@ Spring Security에는 Cross Site Request Forgery 방지 장치가 디폴트 설�
 ```
 
 ### 3. X-Frame-Options 예외 처리
+이 옵션은 HTTP응답 헤더의 fram, iframe, object에 렌더링할 수 있는지 여부인데, 사이트 내 콘텐츠들이 다른 사이트에 포함되
+
 이 부분을 설정해주지 않으면 화면 접근은 가능하되, 다 깨져서 제대로 보이지 않는다.
 ```java
+.headers().addHeaderWriter(new XFrameOptionsHeaderWriter(XFrameOptionsHeaderWriter.XFrameOptionsMode.SAMEORIGIN))  
+.and()
+```
 
+
+**전체코드**
+```java
+import org.springframework.context.annotation.Bean;  
+import org.springframework.context.annotation.Configuration;  
+import org.springframework.security.config.annotation.web.builders.HttpSecurity;  
+import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;  
+import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;  
+import org.springframework.security.crypto.factory.PasswordEncoderFactories;  
+import org.springframework.security.crypto.password.PasswordEncoder;  
+import org.springframework.security.web.header.writers.frameoptions.XFrameOptionsHeaderWriter;  
+  
+@Configuration  
+@EnableWebSecurity  
+public class SpringSecurityConfig extends WebSecurityConfigurerAdapter {  
+  @Override  
+  protected void configure(HttpSecurity http) throws Exception{  
+ http  .authorizeRequests()  
+  .antMatchers("/h2-console/**").permitAll()  
+  .and()  
+  .csrf()  
+  .ignoringAntMatchers("/h2-console/**")  
+  .and()  
+  .headers().addHeaderWriter(new XFrameOptionsHeaderWriter(XFrameOptionsHeaderWriter.XFrameOptionsMode.SAMEORIGIN))  
+  .and()  
+  .formLogin()  
+  .loginPage("/login")  
+  .permitAll()  
+  .and()  
+  .logout();  
+    }  
+  
+  @Bean  
+  public PasswordEncoder passwordEncoder(){  
+  return PasswordEncoderFactories.createDelegatingPasswordEncoder();  
+    }  
+}
+```
 
 **참고**
 *https://github.com/HomoEfficio/dev-tips/blob/master/Spring%20Security%EC%99%80%20h2-console%20%ED%95%A8%EA%BB%98%20%EC%93%B0%EA%B8%B0.md*
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTM0OTQwOTIzN119
+eyJoaXN0b3J5IjpbNTExNzIwNTAyXX0=
 -->
