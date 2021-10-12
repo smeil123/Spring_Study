@@ -25,8 +25,7 @@ Spring Security에는 Cross Site Request Forgery 방지 장치가 디폴트 설�
 ```
 
 ### 3. X-Frame-Options 예외 처리
-이 옵션은 HTTP응답 헤더의 fram, iframe, object에 렌더링할 수 있는지 여부인데, 사이트 내 콘텐츠들이 다른 사이트에 포함되
-
+이 옵션은 HTTP응답 헤더의 fram, iframe, object에 렌더링할 수 있는지 여부인데, 해당 오브젝트에 악성코드를 삽입한 공격을 할 수 있어 보안상 공격을 막기 위해 사용하는 헤더로 예외처리하지 않으면 Deny로 설정된다.
 이 부분을 설정해주지 않으면 화면 접근은 가능하되, 다 깨져서 제대로 보이지 않는다.
 ```java
 .headers().addHeaderWriter(new XFrameOptionsHeaderWriter(XFrameOptionsHeaderWriter.XFrameOptionsMode.SAMEORIGIN))  
@@ -75,5 +74,5 @@ public class SpringSecurityConfig extends WebSecurityConfigurerAdapter {
 **참고**
 *https://github.com/HomoEfficio/dev-tips/blob/master/Spring%20Security%EC%99%80%20h2-console%20%ED%95%A8%EA%BB%98%20%EC%93%B0%EA%B8%B0.md*
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTExNzIwNTAyXX0=
+eyJoaXN0b3J5IjpbLTY1MjQ1NjM1MF19
 -->
