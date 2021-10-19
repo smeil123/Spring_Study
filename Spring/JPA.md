@@ -264,9 +264,13 @@ Entity가 언제 new로 인식되는지
 **@Persistable**
 * Persistable interface를 구현한 경우
 	* Persistable interface 는 getId(), isNew() 메소드를 제공하는 인터페이스
-	* 즉, Persistable을 구현한 Entity는 
+	* 즉, Persistable을 구현한 Entity는 구현한 isNew() 메소드에 따라 new인지 아닌지 판단
+* 이때는 @Id, @Version 은 new를 구별하는 기준이 되지 않는다.
+
+**Entity Information customize**
+* EntityInformation을 customize하는 경ㅇ
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExMzk0ODYyMzEsLTIwMDQ1MjY2NzksLT
-QwMjE4NzAxNCwxOTg5NDMyMTA1LC0xNTAwMzI4MTk4LDE2OTMw
-ODYyMzQsLTIwODAwNTgxMDMsMTM4MTkxNTc5Ml19
+eyJoaXN0b3J5IjpbLTg1MTg4MTUzOSwtMjAwNDUyNjY3OSwtND
+AyMTg3MDE0LDE5ODk0MzIxMDUsLTE1MDAzMjgxOTgsMTY5MzA4
+NjIzNCwtMjA4MDA1ODEwMywxMzgxOTE1NzkyXX0=
 -->
