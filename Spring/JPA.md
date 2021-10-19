@@ -254,9 +254,15 @@ Entity가 언제 new로 인식되는지
 
 **식별자(@Id)**
 * 식별자가 null 또는 0 인 경우
-* 이때, Long타입과 같이 Wrapper일 경우 null을 newState로 인식하고, int와같이 Primitive일 경우 new상태로 인식합니다 (
+* 이때, Long타입과 같이 Wrapper일 경우 null을 newState로 인식하고, int와같이 Primitive일 경우 new상태로 인식합니다 (무슨말인지 잘 모르겠음)
+
+**@Version**
+* Entity 필드에 있는 @Version이 null 인 경우
+* 이때, @Verion 값이 null + @Id에 값이 존재 -> newState
+
+**
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIxMzE4MzQ1NjIsLTIwMDQ1MjY2NzksLT
-QwMjE4NzAxNCwxOTg5NDMyMTA1LC0xNTAwMzI4MTk4LDE2OTMw
-ODYyMzQsLTIwODAwNTgxMDMsMTM4MTkxNTc5Ml19
+eyJoaXN0b3J5IjpbLTU5MzU5MTM2LC0yMDA0NTI2Njc5LC00MD
+IxODcwMTQsMTk4OTQzMjEwNSwtMTUwMDMyODE5OCwxNjkzMDg2
+MjM0LC0yMDgwMDU4MTAzLDEzODE5MTU3OTJdfQ==
 -->
