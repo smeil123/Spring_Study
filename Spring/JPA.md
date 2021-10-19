@@ -249,10 +249,14 @@ public class Application {
 * entity 가 새로 생성될 예정 -> persist() 호출
 * entity 가 기존에 있음 -> merge() 호출
 
-새로 생성될지 아닐지 판단 기준
-1. 
+### 새로 생성될지 아닐지 판단 기준
+Entity가 언제 new로 인식되는지
+
+**식별자(@Id)**
+* 식별자가 null 또는 0 인 경우
+* 이때, Long타입과 같이 Wrapper일 경우 null을 newState로 인식하고, int와같이 Primitive일 경우 new상태로 인식합니다 (
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTYwMDQ1OTkzNCwtMjAwNDUyNjY3OSwtND
-AyMTg3MDE0LDE5ODk0MzIxMDUsLTE1MDAzMjgxOTgsMTY5MzA4
-NjIzNCwtMjA4MDA1ODEwMywxMzgxOTE1NzkyXX0=
+eyJoaXN0b3J5IjpbLTIxMzE4MzQ1NjIsLTIwMDQ1MjY2NzksLT
+QwMjE4NzAxNCwxOTg5NDMyMTA1LC0xNTAwMzI4MTk4LDE2OTMw
+ODYyMzQsLTIwODAwNTgxMDMsMTM4MTkxNTc5Ml19
 -->
