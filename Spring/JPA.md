@@ -275,9 +275,10 @@ Entity가 언제 new로 인식되는지
 
 ### Merge
 * 데이터를 만들 때 key값을 알고, key를 기준으로 select해서 없으면 insert 문 호출
-* select -> insert 단계로 수행되기 때문에 데이터가 많으면 성능 저하를 일
+* select -> insert 단계로 수행되기 때문에 데이터가 많으면 **성능 저하**를 일으킴
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2OTgzODg0MCwtMjAwNDUyNjY3OSwtND
-AyMTg3MDE0LDE5ODk0MzIxMDUsLTE1MDAzMjgxOTgsMTY5MzA4
-NjIzNCwtMjA4MDA1ODEwMywxMzgxOTE1NzkyXX0=
+eyJoaXN0b3J5IjpbLTEzNDg2MzAwODIsLTIwMDQ1MjY2NzksLT
+QwMjE4NzAxNCwxOTg5NDMyMTA1LC0xNTAwMzI4MTk4LDE2OTMw
+ODYyMzQsLTIwODAwNTgxMDMsMTM4MTkxNTc5Ml19
 -->
