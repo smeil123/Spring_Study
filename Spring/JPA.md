@@ -271,9 +271,13 @@ Entity가 언제 new로 인식되는지
 * EntityInformation을 customize하는 경우, 위와 비슷하게 개발자가 커스터마이증한대로 isNew 를 판단
 
 ### Persist
-* 입력받은 데이터를 가지고  insert ㅁ
+* 입력받은 데이터를 가지고  insert 문을 바로 호출
+
+### Merge
+* key값이 이미 데이터가 존재하면 insert 되지 않음
+* 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTM5NDk2MTUyNCwtMjAwNDUyNjY3OSwtND
-AyMTg3MDE0LDE5ODk0MzIxMDUsLTE1MDAzMjgxOTgsMTY5MzA4
-NjIzNCwtMjA4MDA1ODEwMywxMzgxOTE1NzkyXX0=
+eyJoaXN0b3J5IjpbLTE0MDg0MjIxMDYsLTIwMDQ1MjY2NzksLT
+QwMjE4NzAxNCwxOTg5NDMyMTA1LC0xNTAwMzI4MTk4LDE2OTMw
+ODYyMzQsLTIwODAwNTgxMDMsMTM4MTkxNTc5Ml19
 -->
