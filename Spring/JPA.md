@@ -244,9 +244,15 @@ public class Application {
 }
 ```
 
+## Save 동작 원리
 
+* entity 가 새로 생성될 예정 -> persist() 호출
+* entity 가 기존에 있음 -> merge() 호출
+
+새로 생성될지 아닐지 판단 기준
+1. 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwMDQ1MjY2NzksLTQwMjE4NzAxNCwxOT
-g5NDMyMTA1LC0xNTAwMzI4MTk4LDE2OTMwODYyMzQsLTIwODAw
-NTgxMDMsMTM4MTkxNTc5Ml19
+eyJoaXN0b3J5IjpbLTYwMDQ1OTkzNCwtMjAwNDUyNjY3OSwtND
+AyMTg3MDE0LDE5ODk0MzIxMDUsLTE1MDAzMjgxOTgsMTY5MzA4
+NjIzNCwtMjA4MDA1ODEwMywxMzgxOTE1NzkyXX0=
 -->
