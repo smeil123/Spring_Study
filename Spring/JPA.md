@@ -262,15 +262,18 @@ Entity가 언제 new로 인식되는지
 > @Version : Entity에서 Lock을 잡고 싶을 때 사용 ??
 
 **@Persistable**
-* Persistable interface를 구현한 경우
+* Persistable interface를 구현한 경우 => 개발자가 정의하는 대로
 	* Persistable interface 는 getId(), isNew() 메소드를 제공하는 인터페이스
 	* 즉, Persistable을 구현한 Entity는 구현한 isNew() 메소드에 따라 new인지 아닌지 판단
 * 이때는 @Id, @Version 은 new를 구별하는 기준이 되지 않는다.
 
 **Entity Information customize**
-* EntityInformation을 customize하는 경ㅇ
+* EntityInformation을 customize하는 경우, 위와 비슷하게 개발자가 커스터마이증한대로 isNew 를 판단
+
+### Persist
+* 입력받은 데이터를 가지고  insert ㅁ
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTg1MTg4MTUzOSwtMjAwNDUyNjY3OSwtND
+eyJoaXN0b3J5IjpbLTM5NDk2MTUyNCwtMjAwNDUyNjY3OSwtND
 AyMTg3MDE0LDE5ODk0MzIxMDUsLTE1MDAzMjgxOTgsMTY5MzA4
 NjIzNCwtMjA4MDA1ODEwMywxMzgxOTE1NzkyXX0=
 -->
