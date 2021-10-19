@@ -259,10 +259,14 @@ Entity가 언제 new로 인식되는지
 **@Version**
 * Entity 필드에 있는 @Version이 null 인 경우
 * 이때, @Verion 값이 null + @Id에 값이 존재 -> newState
+> @Version : Entity에서 Lock을 잡고 싶을 때 사용 ??
 
-**
+**@Persistable**
+* Persistable interface를 구현한 경우
+	* Persistable interface 는 getId(), isNew() 메소드를 제공하는 인터페이스
+	* 즉, Persistable을 구현한 Entity는 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTU5MzU5MTM2LC0yMDA0NTI2Njc5LC00MD
-IxODcwMTQsMTk4OTQzMjEwNSwtMTUwMDMyODE5OCwxNjkzMDg2
-MjM0LC0yMDgwMDU4MTAzLDEzODE5MTU3OTJdfQ==
+eyJoaXN0b3J5IjpbLTExMzk0ODYyMzEsLTIwMDQ1MjY2NzksLT
+QwMjE4NzAxNCwxOTg5NDMyMTA1LC0xNTAwMzI4MTk4LDE2OTMw
+ODYyMzQsLTIwODAwNTgxMDMsMTM4MTkxNTc5Ml19
 -->
